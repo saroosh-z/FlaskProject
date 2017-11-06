@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+	<link rel="stylesheet" href="static/css/main.css" type="text/css">
+
+{% block content %}
+<div class="checklist">
+	
+	<form>
+		<h3>Safety First</h3>
+		{% for i in safety_list%}
+			<input type="checkbox" name=""> {{i}} <br>
+		{% endfor %}
+	</form>
+	<form method="get" action="/camping">
+		<h3>Food</h3>
+		{% for i in food_list%}
+			<input type="checkbox" name=""> {{i}} <br>
+		{% endfor %}
+	</form>
+	<form>
+		<h3>Personal</h3>
+		{% for i in personal_list%}
+			<input type="checkbox" name=""> {{i}} <br>
+		{% endfor %}
+	</form>
+</div>
+
+{% endblock %}

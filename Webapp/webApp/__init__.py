@@ -1,4 +1,6 @@
-from flask import Flask
-app = Flask('app')
-
+from flask import Flask, render_template, request
+##CREATE AN APP AND GIVE IT A NAME
+app = Flask('webApp')
+## FROM THE CURRENT DIRECTORY, IMPORT VIEWS
 from . import views
+## VIEWS IS WEHRE ALL YOUR CODE IS
